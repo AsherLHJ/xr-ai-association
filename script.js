@@ -1,3 +1,21 @@
+// 立即执行语言切换（防止 FOUC - Flash of Unstyled Content）
+(function() {
+    const savedLang = localStorage.getItem('language') || 'en';
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    
+    // 立即设置主题
+    document.body.className = `${savedTheme}-mode`;
+    
+    // 等待 DOM 后再设置语言
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => setLanguage(savedLang), 0);
+        });
+    } else {
+        setTimeout(() => setLanguage(savedLang), 0);
+    }
+})();
+
 // 等待 DOM 加载完成
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM Content Loaded');
@@ -108,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function setLanguage(lang) {
         // 更新所有带有 data-zh 和 data-en 属性的元素
         const elements = document.querySelectorAll('[data-zh][data-en]');
+        console.log(`Setting language to ${lang}, found ${elements.length} elements`);
         elements.forEach(element => {
             if (lang === 'zh') {
                 element.textContent = element.dataset.zh;
