@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XR+AI 协会 | 香港科技大学（广州）</title>
+    <title>XR+AI Association | HKUST(GZ)</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="light-mode">
+<body class="light-mode" data-theme="light" data-lang="en">
     <!-- 导航栏 -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
-                    <img src="assets/logo.jpg" alt="XR+AI 协会 Logo" class="logo-img">
-                    <span class="logo-text">XR+AI 协会</span>
+                    <img src="assets/logo.png" alt="XR+AI Association Logo" class="logo-img">
+                    <span class="logo-text" data-zh="XR+AI 协会" data-en="XR+AI Association">XR+AI 协会</span>
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="pages/about.html">协会简介</a></li>
-                <li><a href="pages/events.html">历史活动</a></li>
-                <li><a href="pages/programs.html">活动策划</a></li>
-                <li><a href="pages/experts.html">特邀专家</a></li>
-                <li><a href="pages/partnership.html">行业合作</a></li>
-                <li><a href="pages/contact.html">联系我们</a></li>
+                <li><a href="index.html" data-zh="首页" data-en="Home">首页</a></li>
+                <li><a href="pages/about.html" data-zh="协会简介" data-en="About">协会简介</a></li>
+                <li><a href="pages/events.html" data-zh="历史活动" data-en="Events">历史活动</a></li>
+                <li><a href="pages/programs.html" data-zh="活动策划" data-en="Programs">活动策划</a></li>
+                <li><a href="pages/experts.html" data-zh="特邀专家" data-en="Experts">特邀专家</a></li>
+                <li><a href="pages/partnership.html" data-zh="行业合作" data-en="Partnership">行业合作</a></li>
+                <li><a href="pages/contact.html" data-zh="联系我们" data-en="Contact">联系我们</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="lang-toggle" id="lang-toggle" data-lang="zh" title="Switch to English">
-                    <span class="lang-text">中</span>
+                <button class="lang-toggle" id="lang-toggle" title="切换语言 / Switch Language">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="lang-text">EN</span>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" title="切换主题 / Switch Theme">
+                    <span class="theme-icon" id="theme-icon">☀️</span>
                 </button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -41,21 +45,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="assets/logo.png" alt="XR+AI Association" class="hero-bg-logo">
+        </div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="gradient-text">XR+AI 协会</span>
-                <br>香港科技大学（广州）
+                <span class="gradient-text" data-zh="XR+AI 协会" data-en="XR+AI Association">XR+AI 协会</span>
+                <br>
+                <span class="university-name" data-zh="香港科技大学（广州）" data-en="HKUST(GZ)">香港科技大学（广州）</span>
             </h1>
-            <p class="hero-subtitle">科技造梦 · 探索未知 · 突破极限</p>
-            <p class="hero-desc">Be the Pioneer: Embrace the Unknown, Push the limits</p>
+            <p class="hero-subtitle" data-zh="科技造梦 · 探索未知 · 突破极限" data-en="Be the Pioneer: Embrace the Unknown, Push the Limits">科技造梦 · 探索未知 · 突破极限</p>
             <div class="hero-buttons">
-                <a href="pages/about.html" class="btn btn-primary">了解我们</a>
-                <a href="pages/events.html" class="btn btn-secondary">查看活动</a>
-            </div>
-        </div>
-        <div class="hero-bg">
-            <div class="hero-image-container">
-                <img src="assets/images/1协会简介/1.png" alt="协会介绍" class="hero-bg-image">
+                <a href="pages/about.html" class="btn btn-primary" data-zh="了解我们" data-en="Learn More">了解我们</a>
+                <a href="pages/events.html" class="btn btn-secondary" data-zh="查看活动" data-en="View Events">查看活动</a>
             </div>
         </div>
     </section>
@@ -63,10 +65,10 @@
     <!-- 协会简介预览 -->
     <section id="about-preview" class="section">
         <div class="container">
-            <h2 class="section-title">协会简介</h2>
+            <h2 class="section-title" data-zh="协会简介" data-en="About Us">协会简介</h2>
             <div class="about-preview-content">
                 <div class="about-text">
-                    <p>我们致力于打造一个多元共创的社区，赋能港科广的每一位学子积极参与创新竞赛、跨学科合作与应用落地，推动科技与社会的深度融合。</p>
+                    <p data-zh="我们致力于打造一个多元共创的社区，赋能港科广的每一位学子积极参与创新竞赛、跨学科合作与应用落地，推动科技与社会的深度融合。" data-en="We are committed to building a diverse and collaborative community, empowering every student at HKUST(GZ) to actively participate in innovation competitions, interdisciplinary collaboration, and application implementation, promoting the deep integration of technology and society.">我们致力于打造一个多元共创的社区，赋能港科广的每一位学子积极参与创新竞赛、跨学科合作与应用落地，推动科技与社会的深度融合。</p>
                 </div>
                 <div class="about-images">
                     <img src="assets/images/1协会简介/2.png" alt="协会活动" class="about-preview-img">
@@ -74,7 +76,7 @@
                 </div>
             </div>
             <div class="section-cta">
-                <a href="pages/about.html" class="btn btn-primary">了解更多</a>
+                <a href="pages/about.html" class="btn btn-primary" data-zh="了解更多" data-en="Learn More">了解更多</a>
             </div>
         </div>
     </section>
@@ -82,22 +84,22 @@
     <!-- 玩学用三部曲 -->
     <section id="play-learn-apply" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">玩学用三部曲</h2>
+            <h2 class="section-title" data-zh="玩学用三部曲" data-en="Play-Learn-Apply Trilogy">玩学用三部曲</h2>
             <div class="pla-grid">
                 <div class="pla-card">
                     <img src="assets/images/2协会采用玩学用三部曲/10.png" alt="玩" class="pla-image">
-                    <h3>玩</h3>
-                    <p>沉浸式体验，激发兴趣</p>
+                    <h3 class="pla-title" data-zh="玩" data-en="Play">玩</h3>
+                    <p data-zh="激发兴趣与好奇心" data-en="Ignite interest and curiosity">激发兴趣与好奇心</p>
                 </div>
                 <div class="pla-card">
                     <img src="assets/images/2协会采用玩学用三部曲/11.png" alt="学" class="pla-image">
-                    <h3>学</h3>
-                    <p>系统学习，掌握技术</p>
+                    <h3 class="pla-title" data-zh="学" data-en="Learn">学</h3>
+                    <p data-zh="学习前沿技术与知识" data-en="Learn cutting-edge technology and knowledge">学习前沿技术与知识</p>
                 </div>
                 <div class="pla-card">
                     <img src="assets/images/2协会采用玩学用三部曲/12.png" alt="用" class="pla-image">
-                    <h3>用</h3>
-                    <p>实践应用，创新突破</p>
+                    <h3 class="pla-title" data-zh="用" data-en="Apply">用</h3>
+                    <p data-zh="实践应用与创新创造" data-en="Practice, apply, and innovate">实践应用与创新创造</p>
                 </div>
             </div>
         </div>
@@ -106,27 +108,32 @@
     <!-- 核心部门 -->
     <section id="departments" class="section">
         <div class="container">
-            <h2 class="section-title">核心部门</h2>
+            <h2 class="section-title" data-zh="核心部门" data-en="Core Departments">核心部门</h2>
             <div class="departments-grid">
                 <div class="department-card">
-                    <div class="department-icon">🎓</div>
-                    <h3>学术/技术部</h3>
-                    <p>与学术界或工业界的专家建立联系，共同组织技术讲座、技术培训</p>
+                    <div class="department-icon">🔬</div>
+                    <h3 data-zh="研究开发部" data-en="R&D Department">研究开发部</h3>
+                    <p data-zh="负责XR+AI技术的研究与开发，推动技术创新" data-en="Responsible for XR+AI technology research and development, driving technological innovation">负责XR+AI技术的研究与开发，推动技术创新</p>
                 </div>
                 <div class="department-card">
-                    <div class="department-icon">📋</div>
-                    <h3>活动策划部</h3>
-                    <p>策划和组织协会的各类活动，协调活动参与者确保活动的顺利进行</p>
+                    <div class="department-icon">🎓</div>
+                    <h3 data-zh="教育培训部" data-en="Education Department">教育培训部</h3>
+                    <p data-zh="组织技术讲座、工作坊，提升成员技术能力" data-en="Organize technical lectures and workshops to enhance members' skills">组织技术讲座、工作坊，提升成员技术能力</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-icon">🎯</div>
+                    <h3 data-zh="项目管理部" data-en="Project Management">项目管理部</h3>
+                    <p data-zh="管理协会项目，协调跨部门合作" data-en="Manage association projects and coordinate cross-department collaboration">管理协会项目，协调跨部门合作</p>
                 </div>
                 <div class="department-card">
                     <div class="department-icon">📢</div>
-                    <h3>宣传运营部</h3>
-                    <p>负责协会的宣传，推广协会的活动和项目、维护协会共建形象</p>
+                    <h3 data-zh="宣传运营部" data-en="Marketing Department">宣传运营部</h3>
+                    <p data-zh="负责协会的宣传，推广协会的活动和项目、维护协会共建形象" data-en="Responsible for association promotion, marketing activities and projects, maintaining association image">负责协会的宣传，推广协会的活动和项目、维护协会共建形象</p>
                 </div>
                 <div class="department-card">
                     <div class="department-icon">🤝</div>
-                    <h3>伙伴关系部</h3>
-                    <p>与外部合作伙伴联系，为活动和项目提供支持，参加外部活动和会议</p>
+                    <h3 data-zh="伙伴关系部" data-en="Partnership Department">伙伴关系部</h3>
+                    <p data-zh="与外部合作伙伴联系，为活动和项目提供支持，参加外部活动和会议" data-en="Connect with external partners, provide support for activities and projects, participate in external events and conferences">与外部合作伙伴联系，为活动和项目提供支持，参加外部活动和会议</p>
                 </div>
             </div>
         </div>
@@ -135,26 +142,26 @@
     <!-- 历史活动预览 -->
     <section id="events-preview" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">历史活动</h2>
+            <h2 class="section-title" data-zh="历史活动" data-en="Past Events">历史活动</h2>
             <div class="events-preview-grid">
                 <div class="event-preview-card">
                     <img src="assets/images/5活动一_Rokid线下工作坊/16.png" alt="Rokid工作坊" class="event-preview-img">
-                    <h3>Rokid 线下工作坊</h3>
-                    <p>AI+AR 双核驱动，重新定义多模态空间计算</p>
+                    <h3 data-zh="Rokid 线下工作坊" data-en="Rokid Offline Workshop">Rokid 线下工作坊</h3>
+                    <p data-zh="AI+AR 双核驱动，重新定义多模态空间计算" data-en="AI+AR dual-core drive, redefining multimodal spatial computing">AI+AR 双核驱动，重新定义多模态空间计算</p>
                 </div>
                 <div class="event-preview-card">
                     <img src="assets/images/6活动二_XR探索之旅（Game Day+Lab Tour）/21.png" alt="XR探索之旅" class="event-preview-img">
-                    <h3>XR 探索之旅</h3>
-                    <p>Game Day + Lab Tour，超过100人参与</p>
+                    <h3 data-zh="XR 探索之旅" data-en="XR Exploration Journey">XR 探索之旅</h3>
+                    <p data-zh="Game Day + Lab Tour，超过100人参与" data-en="Game Day + Lab Tour, over 100 participants">Game Day + Lab Tour，超过100人参与</p>
                 </div>
                 <div class="event-preview-card">
                     <img src="assets/images/7活动三_"逸界·光影未来"2025 AI文化节/26.png" alt="AI文化节" class="event-preview-img">
-                    <h3>"逸界·光影未来" AI 文化节</h3>
-                    <p>AI 超感嘉年华，探索无限可能</p>
+                    <h3 data-zh='"逸界·光影未来" AI 文化节' data-en='"Light and Shadow Future" AI Culture Festival'>"逸界·光影未来" AI 文化节</h3>
+                    <p data-zh="AI 超感嘉年华，探索无限可能" data-en="AI Super Sensation Carnival, explore infinite possibilities">AI 超感嘉年华，探索无限可能</p>
                 </div>
             </div>
             <div class="section-cta">
-                <a href="pages/events.html" class="btn btn-primary">查看全部活动</a>
+                <a href="pages/events.html" class="btn btn-primary" data-zh="查看全部活动" data-en="View All Events">查看全部活动</a>
             </div>
         </div>
     </section>
@@ -162,25 +169,25 @@
     <!-- 活动策划预览 -->
     <section id="programs-preview" class="section">
         <div class="container">
-            <h2 class="section-title">活动策划</h2>
+            <h2 class="section-title" data-zh="活动策划" data-en="Upcoming Programs">活动策划</h2>
             <div class="programs-preview">
                 <div class="program-preview-card">
                     <img src="assets/images/10策划一_动态重建及应用元中央实验室/38.png" alt="DREAMS实验室" class="program-preview-img">
                     <div class="program-preview-content">
-                        <h3>动态重建及应用元中央实验室</h3>
-                        <p>配备全栈自主研发的光场重建系统，提供体积视频、三维重建、数字人、VR/AR等方向的研究与应用支持。</p>
+                        <h3 data-zh="动态重建及应用元中央实验室" data-en="Dynamic Reconstruction and Application Meta Lab (DREAMS Lab)">动态重建及应用元中央实验室</h3>
+                        <p data-zh="致力于动态重建、元宇宙及AI应用的研究与开发" data-en="Dedicated to research and development in dynamic reconstruction, metaverse, and AI applications">致力于动态重建、元宇宙及AI应用的研究与开发</p>
                     </div>
                 </div>
                 <div class="program-preview-card">
                     <img src="assets/images/11策划二_DREAMS Lab设备支持/42.png" alt="设备支持" class="program-preview-img">
                     <div class="program-preview-content">
-                        <h3>DREAMS Lab 设备支持</h3>
-                        <p>为全校师生提供先进的设备支持，助力科研与教学。</p>
+                        <h3 data-zh="DREAMS Lab 设备支持" data-en="DREAMS Lab Equipment Support">DREAMS Lab 设备支持</h3>
+                        <p data-zh="为协会成员提供先进的XR设备和实验室资源" data-en="Providing advanced XR equipment and laboratory resources to association members">为协会成员提供先进的XR设备和实验室资源</p>
                     </div>
                 </div>
             </div>
             <div class="section-cta">
-                <a href="pages/programs.html" class="btn btn-primary">了解更多</a>
+                <a href="pages/programs.html" class="btn btn-primary" data-zh="了解更多策划" data-en="Learn More">了解更多策划</a>
             </div>
         </div>
     </section>
@@ -188,26 +195,31 @@
     <!-- 特邀专家预览 -->
     <section id="experts-preview" class="section section-dark">
         <div class="container">
-            <h2 class="section-title">特邀专家</h2>
+            <h2 class="section-title" data-zh="特邀专家" data-en="Featured Experts">特邀专家</h2>
             <div class="experts-preview-grid">
                 <div class="expert-preview-card">
                     <img src="assets/images/12特邀专家/张康教授.png" alt="张康教授" class="expert-preview-img">
-                    <h3>张康教授</h3>
-                    <p>计算机媒体与艺术学域主任</p>
+                    <h3>Prof. Kang Zhang</h3>
+                    <p data-zh="张康教授 - 计算机媒体与艺术学域主任" data-en="Kang Zhang - Head of CMA">张康教授 - 计算机媒体与艺术学域主任</p>
                 </div>
                 <div class="expert-preview-card">
                     <img src="assets/images/12特邀专家/许彬教授.png" alt="许彬教授" class="expert-preview-img">
-                    <h3>许彬教授</h3>
-                    <p>信息枢纽副院长</p>
+                    <h3>Prof. Bin Xu</h3>
+                    <p data-zh="许彬教授 - 信息枢纽副院长" data-en="Bin Xu - Vice Dean of IHub">许彬教授 - 信息枢纽副院长</p>
                 </div>
                 <div class="expert-preview-card">
                     <img src="assets/images/12特邀专家/梁海宁教授.png" alt="梁海宁教授" class="expert-preview-img">
-                    <h3>梁海宁教授</h3>
-                    <p>计算机媒体与艺术副教授</p>
+                    <h3>Prof. Haining Liang</h3>
+                    <p data-zh="梁海宁教授 - 计算机媒体与艺术副教授" data-en="Haining Liang - Associate Professor of CMA">梁海宁教授 - 计算机媒体与艺术副教授</p>
+                </div>
+                <div class="expert-preview-card">
+                    <img src="assets/images/12特邀专家/王宇阳教授.png" alt="王宇阳教授" class="expert-preview-img">
+                    <h3>Prof. Yuyang Wang</h3>
+                    <p data-zh="王宇阳教授" data-en="Yuyang Wang">王宇阳教授</p>
                 </div>
             </div>
             <div class="section-cta">
-                <a href="pages/experts.html" class="btn btn-primary">查看全部专家</a>
+                <a href="pages/experts.html" class="btn btn-primary" data-zh="查看所有专家" data-en="View All Experts">查看所有专家</a>
             </div>
         </div>
     </section>
@@ -215,18 +227,18 @@
     <!-- 合作伙伴 -->
     <section id="partners" class="section">
         <div class="container">
-            <h2 class="section-title">合作伙伴</h2>
+            <h2 class="section-title" data-zh="合作伙伴" data-en="Our Partners">合作伙伴</h2>
             <div class="partners-grid">
-                <img src="assets/images/14合作伙伴/45.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/46.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/47.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/48.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/49.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/50.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/51.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/52.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/53.png" alt="合作伙伴" class="partner-logo">
-                <img src="assets/images/14合作伙伴/54.png" alt="合作伙伴" class="partner-logo">
+                <img src="assets/images/14合作伙伴/45.png" alt="Partner 1" class="partner-logo">
+                <img src="assets/images/14合作伙伴/46.png" alt="Partner 2" class="partner-logo">
+                <img src="assets/images/14合作伙伴/47.png" alt="Partner 3" class="partner-logo">
+                <img src="assets/images/14合作伙伴/48.png" alt="Partner 4" class="partner-logo">
+                <img src="assets/images/14合作伙伴/49.png" alt="Partner 5" class="partner-logo">
+                <img src="assets/images/14合作伙伴/50.png" alt="Partner 6" class="partner-logo">
+                <img src="assets/images/14合作伙伴/51.png" alt="Partner 7" class="partner-logo">
+                <img src="assets/images/14合作伙伴/52.png" alt="Partner 8" class="partner-logo">
+                <img src="assets/images/14合作伙伴/53.png" alt="Partner 9" class="partner-logo">
+                <img src="assets/images/14合作伙伴/54.png" alt="Partner 10" class="partner-logo">
             </div>
         </div>
     </section>
@@ -235,12 +247,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.jpg" alt="XR+AI 协会 Logo" class="footer-logo-img">
-                    <p>XR+AI 协会</p>
-                </div>
-                <p class="footer-text">香港科技大学（广州）</p>
-                <p class="footer-slogan">科技造梦 · 探索未知 · 突破极限</p>
+                <p class="footer-text" data-zh="香港科技大学（广州）" data-en="HKUST(GZ)">香港科技大学（广州）</p>
+                <p class="footer-slogan" data-zh="科技造梦 · 探索未知 · 突破极限" data-en="Be the Pioneer: Embrace the Unknown, Push the Limits">科技造梦 · 探索未知 · 突破极限</p>
             </div>
         </div>
     </footer>

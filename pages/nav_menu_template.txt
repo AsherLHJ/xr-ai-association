@@ -1,0 +1,9 @@
+            <ul class="nav-menu">
+                <li><a href="../index.html" data-zh="首页" data-en="Home">首页</a></li>
+                <li><a href="about.html" data-zh="协会简介" data-en="About">协会简介</a></li>
+                <li><a href="events.html" data-zh="历史活动" data-en="Events">历史活动</a></li>
+                <li><a href="programs.html" data-zh="活动策划" data-en="Programs">活动策划</a></li>
+                <li><a href="experts.html" data-zh="特邀专家" data-en="Experts">特邀专家</a></li>
+                <li><a href="partnership.html" data-zh="行业合作" data-en="Partnership">行业合作</a></li>
+                <li><a href="contact.html" data-zh="联系我们" data-en="Contact">联系我们</a></li>
+            </ul>
