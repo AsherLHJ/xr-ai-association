@@ -203,7 +203,7 @@ img {
     right: 0;
     bottom: 0;
     background: radial-gradient(ellipse at center, #667eea 0%, #764ba2 50%, #0F0F23 100%);
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -215,11 +215,26 @@ img {
     height: auto;
     max-height: 80vh;
     object-fit: contain;
-    opacity: 0.15;
+    opacity: 1.0; /* 增加透明度 */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: floatLogo 4s ease-in-out infinite; /* 添加浮动动画 */
+    mix-blend-mode: overlay; /* 尝试混合模式 */
+}
+
+/* 添加浮动动画关键帧 */
+@keyframes floatLogo {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
 }
 
 .hero-content {
