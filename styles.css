@@ -136,6 +136,8 @@ img {
     display: flex;
     gap: 12px;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .lang-toggle,
@@ -1180,6 +1182,8 @@ img {
         gap: 10px;
         transform: translateY(-100%);
         opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
         transition: all 0.3s ease;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
@@ -1187,6 +1191,8 @@ img {
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .hamburger {
